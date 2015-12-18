@@ -1,32 +1,5 @@
 <h1>Cadastro</h1>
-  
-<%= form_for @user do |f| %>
-  <p>
-    <%= f.label :full_name %><br />
-    <%= f.text_field :full_name %>
-  </p>
-  <p>
-    <%= f.label :location %><br />
-   <%= f.text_field :location %>
- </p>
- <p>
-   <%= f.label :email %><br />
-   <%= f.text_field :email %>
- </p>
- <p>
-   <%= f.label :password %><br />
-   <%= f.password_field :password %>
- </p>
- <p>
-   <%= f.label :password_confirmation %><br />
-   <%= f.password_field :password_confirmation %>
- </p>
- <p>
-   <%= f.label :bio %><br />
-   <%= f.text_area :bio %>
- </p>
- <p>
-   <%= f.submit %>
- </p>
-   
-<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Voltar', root_path %>

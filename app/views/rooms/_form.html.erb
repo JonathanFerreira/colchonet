@@ -1,8 +1,8 @@
 <%= form_for(@room) do |f| %>
   <% if @room.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
-
+      <h2>Infelizmente não foi possível completar
+     a ação pois o formulário possui os seguintes erros:</h2>
       <ul>
       <% @room.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= error_tag @room, :title %>
+    </p>
+    
+    <p>
+      <%= f.label :location %>
+      <%= f.text_field :location %> 
+      <%= error_tag @room, :location %>           
+    </p>
+
+    <p>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <%= error_tag @room, :description %>          
+    </p>
+
+
     <%= f.submit %>
-  </div>
 <% end %>

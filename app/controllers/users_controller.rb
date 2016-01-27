@@ -8,6 +8,8 @@ class UsersController < ApplicationController
       # mude de params[:user] para user_params.
      @user = User.new(user_params)
      if @user.save
+       #se salvar o usuário eu desparo o email
+       Signup.confirm_email(@user).deliver
        redirect_to @user, notice: 'Cadastro criado com sucesso!'
      else
        render action: :new

@@ -1,7 +1,7 @@
 pt:
-  confirmations:
-    sucess: 'Email confirmado com sucesso, obrigado!'
   users:
+    confirmations:
+      sucess: 'Email confirmado com sucesso, obrigado!'
     new:
       title: Cadastro
     edit:
@@ -10,7 +10,11 @@ pt:
       title: "Perfil: %{user_name}"
       edit: 'Editar perfil'
       location: "Localização: %{location}"
-      bio: "Bio: %{bio}"
+      bio: "Bio: %{bio}" 
+  user_sessions:
+    new:
+      title: 'Login'
+      sign_up: 'Cadastre-se'   
   rooms:
     new:
       title: Cadastro
@@ -47,3 +51,15 @@ pt:
         description: Descrição
         location: Localização
         title: Título
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'

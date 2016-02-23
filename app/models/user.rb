@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+	#named scopes
+	scope :most_recent, -> { order('created_at DESC') }
+	scope :from_sampa, -> { where(location: 'São Paulo') }
+	scope :from, ->(location) { where(location: location) } #é possivel passar parametros    
+	
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
 	validates_presence_of :email, :full_name, :location, :password_digest

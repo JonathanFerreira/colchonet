@@ -1,10 +1,10 @@
-class User < ActiveRecord::Base
+class User < ActiveRecord::Base	
+	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+
 	#named scopes
 	scope :most_recent, -> { order('created_at DESC') }
 	scope :from_sampa, -> { where(location: 'São Paulo') }
-	scope :from, ->(location) { where(location: location) } #é possivel passar parametros    
-	
-	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+	scope :confirmed, -> { where.not(confirmed_at: nil) }  
 
 	validates_presence_of :email, :full_name, :location, :password_digest
 	validates_length_of :bio, minimum: 30, allow_blank: false
@@ -30,6 +30,18 @@ class User < ActiveRecord::Base
 	def confirmed?
 	  confirmed_at.present?
 	end
+
+    #faz a verificação do email e senha do usuário
+	def self.authenticate(email, password)
+	  user = confirmed.find_by(email: email)
+	  if user.present?
+	    user.authenticate(password)
+	  end
+	end
+ #    #igual ao método de cima, porém utilizamos o try
+	# def self.authenticate(email, password)
+	#   confirmed.find_by(email: email).try(:authenticate, password)
+	# end
 
 	private
 

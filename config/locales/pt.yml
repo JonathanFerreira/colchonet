@@ -14,7 +14,7 @@ pt:
   user_sessions:
     new:
       title: 'Login'
-      sign_up: 'Cadastre-se'   
+      sign_up: 'Cadastre-se'
   rooms:
     new:
       title: Cadastro
@@ -63,3 +63,6 @@ pt:
     submit:
       user_session:
         create: 'Entrar'
+  flash:
+    notice:
+      signed_in: 'Login efetuado com sucesso!'

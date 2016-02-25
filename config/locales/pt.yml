@@ -66,3 +66,6 @@ pt:
   flash:
     notice:
       signed_in: 'Login efetuado com sucesso!'
+      already_logged_in: 'Você já esta logado!'
+    alert:
+      needs_login: 'Faça o login para continuar'

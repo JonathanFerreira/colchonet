@@ -33,6 +33,10 @@ pt:
   layout:
     rooms: Quartos
     signup: Cadastro
+    signin: Login
+    signout: Logout
+    my_profile: Meu perfil
+    new_room: Cadastre seu quarto!
   general:
     form_error: 'Há erros nos formulários, por favor verifique.'
   activerecord:
@@ -64,8 +68,10 @@ pt:
       user_session:
         create: 'Entrar'
   flash:
-    notice:
-      signed_in: 'Login efetuado com sucesso!'
-      already_logged_in: 'Você já esta logado!'
     alert:
       needs_login: 'Faça o login para continuar'
+    notice:
+      signed_in: 'Login efetuado com sucesso!'
+      signed_out: 'Logout efetuado com sucesso. Até logo!'
+      already_logged_in: 'Você já esta logado!'
+

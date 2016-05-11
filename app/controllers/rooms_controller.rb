@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show, :edit, :update, :destroy]
+  before_action :set_room, only: [:show]
+  before_action :set_users_room, only: [:edit, :update, :destroy]
   before_action :require_authentication, only: [:new, :edit, :create, :update, :destroy]
  
   def index
@@ -17,7 +18,7 @@ class RoomsController < ApplicationController
   end
  
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.build(room_params)
  
     if @room.save
       redirect_to @room, notice: t('flash.notice.room_created')
@@ -42,6 +43,10 @@ class RoomsController < ApplicationController
   private
   def set_room
     @room = Room.find(params[:id])
+  end
+
+  def set_users_room
+    @room = current_user.rooms.find(params[:id])
   end
  
   def room_params

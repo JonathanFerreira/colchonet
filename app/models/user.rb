@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base	
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
+	has_many :rooms
+
 	#named scopes
 	scope :most_recent, -> { order('created_at DESC') }
 	scope :from_sampa, -> { where(location: 'São Paulo') }

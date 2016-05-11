@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base	
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
-
+    
+    has_many :reviews
 	has_many :rooms
 
 	#named scopes

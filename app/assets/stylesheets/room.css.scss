@@ -11,3 +11,24 @@
   display: inline;
   a { font-size: 1.3em; }
 }
+
+#content .review form {
+  margin: 0;
+}
+ 
+#content .review {
+  margin: 0;
+  padding: 0;
+  float: right;
+  border: none;
+}
+ 
+.review label {
+  display: inline;
+}
+ 
+.review .login_required {
+  font-size: 0.8em;
+  color: #666;
+  font-variant: small-caps;
+}

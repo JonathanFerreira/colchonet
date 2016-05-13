@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base	
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
     
-    has_many :reviews
-	has_many :rooms
+	has_many :rooms, dependent: :destroy
+    has_many :reviews, dependent: :destroy
 
 	#named scopes
 	scope :most_recent, -> { order('created_at DESC') }

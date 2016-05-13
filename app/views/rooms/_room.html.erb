@@ -1,5 +1,8 @@
 <article class="room">
   <h2><%= link_to room.title, room %></h2>
+
+  <%= render partial: 'review', object: @user_review %>
+  
   <span class="created">
     <%= t '.owner_html', owner: room.user.full_name, when: l(room.created_at, format: :short) %>
   </span>

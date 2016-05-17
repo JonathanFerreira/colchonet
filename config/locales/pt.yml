@@ -61,12 +61,12 @@ pt:
       search_results: 'Resultados da busca'
     search:
       search_for: 'Buscar por...'
+    review_form:
+      login_to_review: 'Faça o login para avaliar quartos'
     room:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: 'Editar'
       destroy: 'Remover'
-      review_form:
-        login_to_review: 'Faça o login para avaliar quartos'
       review:
         stats:
           zero: 'Não há avaliações'

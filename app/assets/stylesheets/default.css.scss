@@ -166,5 +166,16 @@ form {
   background-color: #F2DEDE;
 }
 
+.pagination {
+  margin: 20px 0;
+}
+.pagination span {
+  padding: 5px;
+  margin: 0 3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  @include shadow(#ccc, 0, 3px, 6px);
+}
+
 
 

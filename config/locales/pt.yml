@@ -1,4 +1,13 @@
 pt:
+
+  views:
+    pagination:
+      first: "&laquo; Primeira"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Próxima &rsaquo;"
+      truncate: "..."
+      
   general:
     form_error: Há erros no formulário, por favor verifique.
   
@@ -18,6 +27,7 @@ pt:
       signed_in: 'Login efetuado com sucesso!'
       signed_out: 'Logout efetuado com sucesso. Até logo!'
       already_logged_in: "Você já está logado."
+      room_created: "Quarto criado com sucesso!"
 
   signup:
     confirm_email:

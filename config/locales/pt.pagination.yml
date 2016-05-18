@@ -1,0 +1,10 @@
+#nao deu certo utilizar esse novo arquivo para fazer
+#a tradução das paginações. entá tudo no pt.yml
+pt:
+ views:
+   pagination:
+     first: "&laquo; Primeira"
+     last: "Última &raquo;"
+     previous: "&lsaquo; Anterior"
+     next: "Próxima &rsaquo;"
+     truncate: "..."

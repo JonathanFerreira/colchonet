@@ -28,10 +28,14 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'therubyracer',  platforms: :ruby
 
+#css e fonts melhores
 gem "font-awesome-rails"
 
 #url slug com friendly_id
 gem 'friendly_id', '5.0.3'
+
+#paginação
+gem 'kaminari'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

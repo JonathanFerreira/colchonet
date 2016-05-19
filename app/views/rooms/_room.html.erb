@@ -13,7 +13,14 @@
       <%= link_to highlight(room.location, @search_query), "https://maps.google.com/?q=#{room.location}",   target: :blank %>
     </span>
   </p>
-  <p><%= highlight(room.description || '', @search_query) %></p>
+  <div class="room-description">
+    <%= link_to(image_tag(room.thumb_url), room.picture_url) if room.has_picture? %>
+   
+    <p>
+      <%= highlight(room.description || '', @search_query) %>
+    </p>
+  </div>
+
   <% if belongs_to_user(room) %>
     <ul>
       <li>

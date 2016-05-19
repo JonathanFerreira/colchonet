@@ -37,6 +37,16 @@ gem 'friendly_id', '5.0.3'
 #paginação
 gem 'kaminari'
 
+#upload de imagens
+gem 'carrierwave', '0.10.0'
+gem 'rmagick', :require => 'RMagick'
+
+#gems para hospedar no heroku
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

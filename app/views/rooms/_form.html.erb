@@ -29,6 +29,13 @@
       <%= error_tag @room, :description %>          
     </p>
 
+    <div>
+       <%= f.label :picture %>
+       <%= f.file_field :picture %>
+       <%= error_tag @room, :picture %>
+    </div>
 
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
